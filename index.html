@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configo Login</title>
+
+    <!-- Google Fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+        rel="stylesheet"
+    >
+
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utilities.css">
+</head>
+<body>
+    <div class="container d-flex">
+
+        <!-- Left Side -->
+        <div class="left-hand-side d-flex-col">
+
+            <!--Logo + Signup Button -->
+            <div class="d-flex header-bar">
+                <img src="static/configo-logo.jpg" alt="Configo Logo" class="logo">
+                <button class="signup-btn">
+                    Sign up
+                    <span class="tooltip">Sign up only via Invitation</span>
+                </button>
+            </div>
+
+            <!-- Login Section -->
+            <div class="d-flex-col login">
+                <div class="login-card">
+                    <h2 class="text-black login-header">Login to Configo</h2>
+                    <p class="text-muted form-instruction">
+                        To enter into Configo, start by entering your email id and password below.
+                    </p>
+
+                    <!-- Login Form -->
+                    <form action="#" method="post">
+                        <!-- Email Input -->
+                        <div class="email-container">
+                            <label for="email" class="email-label">Email</label>
+                            <input 
+                                type="email" 
+                                placeholder="Email" 
+                                name="email" 
+                                id="email" 
+                                class="email-input" 
+                                required
+                            >
+                        </div>
+
+                        <!-- Password Input -->
+                        <div class="password-container">
+                            <label for="password" class="password-label">Password</label>
+                            <input 
+                                type="password" 
+                                placeholder="Password" 
+                                name="password" 
+                                id="password" 
+                                class="password-input" 
+                                required
+                            >
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div>
+                            <button type="submit" id="button" class="submit-btn text-white">
+                                Continue to Login
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Forgot Password -->
+                    <div class="forgot-password text-black">
+                        <p>
+                            Forgot password? 
+                            <a href="#" class="text-decoration-none text-black">Click here</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terms and Conditions -->
+            <div class="terms text-muted">
+                <p>
+                    By signing in, you agree to our 
+                    <a href="#" class="text-muted">privacy policy</a> 
+                    and 
+                    <a href="#" class="text-muted">terms of use</a>.
+                </p>
+            </div>
+        </div>
+
+        <!-- Right Side: Marketing msg -->
+        <div class="right-hand-side">
+            <div class="text-white marketing-msg">
+                <h2>For teams that want to go live yesterday!</h2>
+                <p>Trusted by over 500 awesome Tech Companies</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

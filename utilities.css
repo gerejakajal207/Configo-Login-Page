@@ -1,0 +1,35 @@
+
+/* layout utilities start */
+.d-flex{
+    display: flex;
+}
+.d-flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.align-items-center{
+    align-items: center;
+}
+.center-div{
+    justify-content: center;
+    align-items: center;
+}
+/* layout utilities ends */
+
+/* text utilities start */
+.text-black{
+    color:#10192c;
+}
+.text-white{
+    color: #ffffff;
+}
+.text-muted{
+    color: #78889e;
+}
+/* text utilities end */
+.text-decoration-none{
+    text-decoration: none;
+}

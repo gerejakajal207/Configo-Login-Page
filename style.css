@@ -1,0 +1,378 @@
+/* Reset + fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Main container */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left section */
+.left-hand-side {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-bar {
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  width: 180px;
+  height: 50px;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+/* Signup button + tooltip */
+.signup-btn {
+  position: relative;
+  font-weight: 600;
+  font-size: 0.67rem;
+  width: 65px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 25px;
+  margin-right: 40px;
+}
+.signup-btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px rgb(206, 203, 203);
+}
+.tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5px;
+  padding: 6px 10px;
+  background-color: white;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: #10192c;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 10;
+}
+.signup-btn:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Login section */
+.login {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-card {
+  max-width: 365px;
+  width: 90%;
+  margin: 0 auto;
+}
+.login-header {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.form-instruction {
+  text-align: center;
+  font-size: 0.82rem;
+  max-width: 365px;
+  margin: 0.6rem auto 0;
+}
+
+/* Form */
+.login-card form {
+  width: 100%;
+}
+label {
+  display: flex;
+  flex-direction: column;
+}
+.email-container {
+  margin-top: 2.18rem;
+  width: 100%;
+}
+.password-container {
+  margin-top: 20px;
+}
+.email-label {
+  font-weight: 500;
+}
+.email-input,
+.password-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #b9bdc1;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  box-shadow: none;
+}
+.email-input::placeholder,
+.password-input::placeholder {
+  color: #8c8c8c;
+}
+
+.email-input:hover, .password-input:hover{
+  box-shadow: 0 0 5px rgb(206, 203, 203);
+}
+
+.email-input:focus, .password-input:focus{
+  border: 0.5px solid #1d203f;
+  box-shadow: 0 0 5px rgb(206, 203, 203);
+}
+
+
+/* Submit button */
+.submit-btn {
+  margin-top: 2.5rem;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  background-color: #12142d;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  text-align: center;
+}
+.submit-btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0 8px #12142d;
+}
+
+/* Extras */
+.forgot-password {
+  margin-top: 40px;
+  text-align: center;
+  font-weight: 500;
+}
+ .forgot-password a:hover{
+    color: #390c77;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+.terms {
+  align-self: stretch;
+  text-align: center;
+  font-size: 0.75rem;
+  margin-bottom: 35px;
+}
+.terms>p>a:hover{
+  color: #05063a;
+  text-decoration: underline;
+}
+
+/* Right section */
+.right-hand-side {
+  width: 50vw;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(
+    to top right,
+    #012242 0%,
+    #002a4f 38%,
+    #01396c 68%,
+    #005097 100%
+  );
+}
+.right-hand-side::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("static/logo-icon.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 0% 100%;
+  opacity: 0.18;
+  transform: translateZ(0);
+}
+
+/* Marketing message */
+.marketing-msg {
+  max-width: 600px;
+  margin: 4rem auto 0;
+  text-align: center;
+  padding: 1rem;
+}
+.marketing-msg > h2 {
+  font-size: 38px;
+  font-weight: 600;
+}
+.marketing-msg > p {
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* --- Media queries --- */
+
+/* 1. Small phones (vertical stacking)*/
+@media (max-width: 599px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  .left-hand-side,
+  .right-hand-side {
+    width: 100%;
+    min-height: 50vh;
+    height: auto;
+  }
+
+  .logo {
+    width: 100px;
+    margin-left: 10px;
+  }
+  .signup-btn {
+    font-size: 0.55rem;
+    width: 55px;
+    height: 28px;
+  }
+  .email-input,
+  .password-input {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .submit-btn {
+    font-size: 0.7rem;
+    height: 2.1rem;
+  }
+  .form-instruction {
+    font-size: 0.72rem;
+  }
+  .marketing-msg {
+    width: 95%;
+    margin-top: 1.5rem;
+  }
+  .marketing-msg h2 {
+    font-size: 1.3rem;
+  }
+  .marketing-msg p {
+    font-size: 0.85rem;
+  }
+  .right-hand-side::before {
+    background-size: 30%;   
+    background-position: 0% 100%;
+  }
+  
+}
+
+/* 2. small devices (vertical stacking) */
+@media (min-width: 600px) and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  .left-hand-side,
+  .right-hand-side {
+    width: 100%;
+    min-height: 50vh;
+    height: auto;
+  }
+  .logo {
+    width: 120px;
+    margin-left: 15px;
+  }
+  .signup-btn {
+    width: 60px;
+    height: 30px;
+    font-size: 0.6rem;
+    margin-right: 15px;
+  }
+  .login-card {
+    width: 90%;
+  }
+  .form-instruction {
+    font-size: 0.75rem;
+  }
+  .submit-btn {
+    font-size: 0.75rem;
+    height: 2.3rem;
+  }
+  .forgot-password {
+    font-size: 0.85rem;
+  }
+ 
+  .terms {
+    font-size: 0.7rem;
+    margin-bottom: 20px;
+  }
+  .marketing-msg {
+    width: 90%;
+    padding: 1rem;
+  }
+  .marketing-msg h2 {
+    font-size: 1.5rem;
+  }
+  .marketing-msg p {
+    font-size: 0.9rem;
+  }
+  .right-hand-side::before {
+    background-size: 25%;   
+    background-position: 0% 100%;
+  }
+}
+
+/* 3. medium devices (horizontal) */
+@media (min-width: 769px) and (max-width: 990px) {
+  .container {
+    flex-direction: row;
+    height: 100vh;
+  }
+  .left-hand-side,
+  .right-hand-side {
+    width: 50%;
+    height: 100vh;
+  }
+  .marketing-msg {
+    width: 80%;
+    margin: 2rem auto;
+  }
+}
+
+/* 4. large devices (horizontal) */
+@media (min-width: 991px) and (max-width: 1200px) {
+  .container {
+    flex-direction: row;
+    height: auto;
+  }
+  .left-hand-side,
+  .right-hand-side {
+    width: 50%;
+    height: 100vh;
+  }
+  .marketing-msg {
+    width: 80%;
+    margin: 2rem auto;
+  }
+}
+
+/* 5. extra large devices (horizontal) */
+@media (min-width: 1201px) {
+  .container {
+    flex-direction: row;
+  }
+}
